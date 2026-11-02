@@ -1,0 +1,281 @@
+.projects-tasks-page,
+.admin-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0 64px;
+}
+
+.projects-tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.projects-tasks-header h1,
+.admin-page h1 {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing: -1.2px;
+}
+
+.projects-tasks-header p:not(.eyebrow) {
+  margin: 8px 0 0;
+  color: #697386;
+}
+
+.back-link { color: #315ecb; font-size: 13px; font-weight: 700; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.creation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+}
+
+.creation-card,
+.admin-panel {
+  display: grid;
+  gap: 17px;
+  padding: 26px;
+  border: 1px solid #e7eaf0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(27, 39, 64, .06);
+}
+
+.creation-card label,
+.admin-panel label {
+  display: grid;
+  gap: 8px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.creation-card input,
+.creation-card select,
+.creation-card textarea,
+.admin-page input,
+.admin-page select {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid #dce1e9;
+  border-radius: 8px;
+  background: #fff;
+  color: #202a3b;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.creation-card input:focus,
+.creation-card select:focus,
+.creation-card textarea:focus,
+.admin-page input:focus,
+.admin-page select:focus {
+  border-color: #7097ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+}
+
+.creation-card textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 6px;
+}
+
+.card-heading h2 {
+  margin: 0;
+  color: #202a3b;
+  font-size: 19px;
+}
+
+.card-heading p {
+  margin: 5px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+}
+
+.step-badge {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border-radius: 12px;
+  background: #eaf0ff;
+  color: #245be0;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.step-purple { background: #f0eaff; color: #7041d8; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.primary-action {
+  min-height: 46px;
+  margin-top: 2px;
+  border-radius: 9px;
+  background: #2563eb;
+  font-weight: 700;
+}
+
+.purple-action { background: #7041d8; }
+.primary-action:hover:not(:disabled) { filter: brightness(.94); }
+
+.field-hint,
+.empty-options { color: #818a99; font-size: 12px; }
+.field-hint { margin-top: -10px; }
+
+.form-feedback {
+  margin: 0 0 18px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.form-feedback.success { background: #eaf8ef; color: #197344; }
+.form-feedback.error { background: #fff0ef; color: #b42318; }
+
+.employee-picker { position: relative; }
+
+.picker-trigger {
+  display: flex;
+  width: 100%;
+  min-height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #dce1e9;
+  border-radius: 8px;
+  background: #fff;
+  color: #475467;
+  text-align: left;
+}
+
+.picker-trigger:disabled { color: #98a2b3; background: #f8fafc; }
+
+.employee-picker-menu {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 5px);
+  right: 0;
+  left: 0;
+  max-height: 230px;
+  overflow: auto;
+  padding: 6px;
+  border: 1px solid #e0e5ed;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(20, 31, 51, .14);
+}
+
+.employee-option {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  gap: 10px !important;
+  padding: 9px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.employee-option:hover { background: #f5f7fb; }
+.employee-option input { width: 16px !important; min-height: 16px !important; accent-color: #7041d8; }
+.employee-option span { display: grid; gap: 3px; }
+.employee-option strong { color: #344054; font-size: 13px; }
+.employee-option small { color: #858e9d; font-size: 11px; font-weight: 400; }
+.empty-options { margin: 8px; }
+
+.admin-page > p { color: #727d8f; }
+.admin-actions { display: flex; gap: 10px; align-items: center; }
+.admin-actions input { max-width: 340px; }
+.admin-team-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 22px 0; }
+.admin-team-card { padding: 17px; border: 1px solid #e7eaf0; border-radius: 12px; background: #fff; box-shadow: 0 6px 20px rgba(27,39,64,.04); }
+.admin-team-card h3 { margin: 0 0 10px; color: #202a3b; }
+.admin-team-card p { margin: 5px 0; color: #697386; font-size: 13px; }
+.admin-panel { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; }
+.admin-panel > div { position: relative; }
+.admin-field-label { display: block; margin-bottom: 8px; color: #344054; font-size: 13px; font-weight: 650; }
+.admin-panel .admin-picker-trigger { display: flex; width: 100%; min-height: 44px; justify-content: space-between; align-items: center; padding: 0 12px; border: 1px solid #dce1e9; border-radius: 8px; background: #fff; color: #475467; text-align: left; }
+.admin-panel .admin-picker-field { align-self: end; }
+.admin-panel .employee-menu { position: absolute; z-index: 3; top: calc(100% + 5px); left: 0; width: 100%; max-height: 200px; overflow: auto; padding: 8px; border: 1px solid #dce1e9; border-radius: 9px; background: #fff; box-shadow: 0 10px 25px rgba(20,31,51,.13); }
+.admin-panel .employee-menu label { display: flex; grid-template-columns: none; align-items: center; gap: 8px; padding: 6px; cursor: pointer; }
+.admin-panel .employee-menu input { width: 16px; min-height: 16px; }
+.admin-assign-button { min-height: 44px; }
+
+@media (max-width: 780px) {
+  .creation-grid { grid-template-columns: 1fr; }
+  .admin-panel { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .projects-tasks-page, .admin-page { width: min(100% - 24px, 1180px); padding-top: 26px; }
+  .creation-card { padding: 19px; }
+  .field-row { grid-template-columns: 1fr; }
+}
+
+/* Shared dark workspace styling for admin and project screens */
+.projects-tasks-page, .admin-page { color: #e5efff; }
+.projects-tasks-header h1, .admin-page h1 { color: #f2f7ff; text-shadow: 0 0 24px rgba(35,135,255,.2); }
+.projects-tasks-header p:not(.eyebrow), .admin-page > p { color: #9aacc8; }
+.back-link { color: #63baff; }
+.eyebrow { color: #48b5ff; }
+.creation-card, .admin-panel, .admin-team-card {
+  border-color: #203755;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #111d30, #0b1422);
+  box-shadow: 0 14px 36px rgba(0,0,0,.22), inset 0 1px 0 rgba(143,190,255,.04);
+}
+.creation-card label, .admin-panel label, .admin-field-label { color: #afc1dc; }
+.creation-card input, .creation-card select, .creation-card textarea, .admin-page input, .admin-page select,
+.picker-trigger, .admin-panel .admin-picker-trigger {
+  border-color: #2a405f;
+  background: #0a1423;
+  color: #e4efff;
+}
+.creation-card input::placeholder, .creation-card textarea::placeholder, .admin-page input::placeholder { color: #7489a7; }
+.creation-card input:focus, .creation-card select:focus, .creation-card textarea:focus, .admin-page input:focus, .admin-page select:focus {
+  border-color: #258cff;
+  box-shadow: 0 0 0 3px rgba(37,140,255,.15);
+}
+.card-heading h2, .admin-team-card h3 { color: #eaf2ff; }
+.card-heading p, .admin-team-card p { color: #91a5c1; }
+.step-badge { background: #102b4e; color: #68bcff; }
+.step-purple { background: #211b49; color: #a99aff; }
+.primary-action { background: linear-gradient(120deg, #1688ff, #3154ed); box-shadow: 0 6px 18px rgba(20,108,255,.2); }
+.purple-action { background: linear-gradient(120deg, #5468ff, #884dff); }
+.field-hint, .empty-options { color: #8296b2; }
+.employee-picker-menu, .admin-panel .employee-menu {
+  border-color: #2a405f;
+  background: #0d1829;
+  box-shadow: 0 14px 32px rgba(0,0,0,.4);
+}
+.employee-option:hover, .admin-panel .employee-menu label:hover { background: #142641; }
+.employee-option strong, .admin-panel .employee-menu label { color: #dceaff; }
+.employee-option small { color: #91a5c1; }
+.form-feedback.success { border: 1px solid #155944; background: #0b2821; color: #70e6b9; }
+.form-feedback.error { border: 1px solid #713044; background: #2a121d; color: #ff9cae; }
